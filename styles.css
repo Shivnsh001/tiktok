@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('background.png') no-repeat center center fixed ;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+.container {
+    text-align: center;
+    border: 3px solid #444;
+    padding: 20px;
+    background: rgba(34, 34, 34, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #d4af37;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: url('game-image.png') no-repeat center center;
+    background-size: cover;
+    border: 2px solid #d4af37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    color: #44ff44;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.cell.x {
+    background: none;
+    color: #ff4444; /* Brighter red for X */
+}
+
+.cell.o {
+    background: none;
+    color: #44ff44; /* Brighter green for O */
+}
+
+.cell:hover {
+    background: #555;
+    transform: scale(1.1);
+}
+
+.message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background: red;
+    color: #222;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.reset-button:hover {
+    background: #b08c3e;
+    transform: scale(1.1);
+}
+
+.victory {
+    display: none;
+    text-align: center;
+}
+
+.victory-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.victory-video {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
